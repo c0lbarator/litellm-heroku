@@ -1,0 +1,1 @@
+web: litellm --host 0.0.0.0 --port $PORT --detailed_debug
