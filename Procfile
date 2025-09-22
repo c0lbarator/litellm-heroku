@@ -1,2 +1,0 @@
-web: litellm --host 0.0.0.0 --port $PORT --detailed_debug
-release: python -c "import os,inspect,litellm.proxy as p; import sys; schema=os.path.join(os.path.dirname(inspect.getfile(p)),'schema.prisma'); print('Using',schema); sys.exit(0 if os.path.exists(schema) else 1)" && python -m prisma generate --schema $(python -c "import os,inspect,litellm.proxy as p; print(os.path.join(os.path.dirname(inspect.getfile(p)),'schema.prisma'))")
